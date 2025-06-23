@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MTC Rival Snake</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="game-container">
+        <div id="ui-header">
+            <div class="logo small">
+                <svg id='Layer_2' data-name='Layer 2' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 609.95 654.06'>
+                    <defs><style>.cls-1,.cls-2,.cls-3{fill:none;stroke-miterlimit:10;}.cls-1{stroke:#009fc2;}.cls-1,.cls-2{stroke-width:15px;}.cls-2{stroke:#c0151b;}.cls-3{stroke:#fff;stroke-width:28px;}</style></defs>
+                    <polygon class='cls-1' points='159.2 345.78 159.2 191.91 7.5 228.81 7.5 346.78 159.2 345.78'/>
+                    <polygon class='cls-2' points='197.88 383.9 197.88 221.07 46.35 259.06 46.35 383.9 197.88 383.9'/>
+                    <polygon class='cls-3' points='178.62 365.21 178.62 207.09 27.1 243.99 27.1 365.21 178.62 365.21'/>
+                    <polygon class='cls-1' points='218.75 62.46 563.6 8.76 563.6 346.02 218.75 347.02 218.75 62.46'/>
+                    <polygon class='cls-2' points='254.6 92.62 602.45 39.92 602.45 384.18 254.6 384.18 254.6 92.62'/>
+                    <polygon class='cls-3' points='235.35 76.65 583.2 23.94 583.2 365.21 235.35 365.21 235.35 76.65'/>
+                    <polygon class='cls-1' points='158.2 404.35 158.2 498.18 57.74 467.87 57.74 404.35 158.2 404.35'/>
+                    <polygon class='cls-2' points='197.04 441.51 197.04 547.33 92.59 517.03 92.59 441.51 197.04 441.51'/>
+                    <polygon class='cls-1' points='214.87 406.35 422.74 406.35 422.74 600 214.87 564.42 214.87 406.35'/>
+                    <polygon class='cls-2' points='253.72 444.51 460.58 444.51 460.58 645.16 253.72 609.58 253.72 444.51'/>
+                    <polygon class='cls-3' points='177.79 423.54 177.79 522.36 76.34 492.06 76.34 423.54 177.79 423.54'/>
+                    <polygon class='cls-3' points='234.47 425.54 441.33 425.54 441.33 623.18 234.47 587.61 234.47 425.54'/>
+                </svg>
+            </div>
+            <div id="score-container">
+                <span id="score-p1">P1: 0</span>
+                <span id="score-p2">P2: 0</span>
+            </div>
+        </div>
+
+        <canvas id="game-canvas"></canvas>
+
+        <div id="ui-overlay">
+            <div id="start-screen" class="screen active">
+                <div class="logo">
+                     <svg id='Layer_2_large' data-name='Layer 2' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 609.95 654.06'>
+                        <defs><style>.cls-1-lg,.cls-2-lg,.cls-3-lg{fill:none;stroke-miterlimit:10;}.cls-1-lg{stroke:#009fc2;}.cls-1-lg,.cls-2-lg{stroke-width:15px;}.cls-2-lg{stroke:#c0151b;}.cls-3-lg{stroke:#fff;stroke-width:28px;}</style></defs>
+                        <polygon class='cls-1-lg' points='159.2 345.78 159.2 191.91 7.5 228.81 7.5 346.78 159.2 345.78'/>
+                        <polygon class='cls-2-lg' points='197.88 383.9 197.88 221.07 46.35 259.06 46.35 383.9 197.88 383.9'/>
+                        <polygon class='cls-3-lg' points='178.62 365.21 178.62 207.09 27.1 243.99 27.1 365.21 178.62 365.21'/>
+                        <polygon class='cls-1-lg' points='218.75 62.46 563.6 8.76 563.6 346.02 218.75 347.02 218.75 62.46'/>
+                        <polygon class='cls-2-lg' points='254.6 92.62 602.45 39.92 602.45 384.18 254.6 384.18 254.6 92.62'/>
+                        <polygon class='cls-3-lg' points='235.35 76.65 583.2 23.94 583.2 365.21 235.35 365.21 235.35 76.65'/>
+                        <polygon class='cls-1-lg' points='158.2 404.35 158.2 498.18 57.74 467.87 57.74 404.35 158.2 404.35'/>
+                        <polygon class='cls-2-lg' points='197.04 441.51 197.04 547.33 92.59 517.03 92.59 441.51 197.04 441.51'/>
+                        <polygon class='cls-1-lg' points='214.87 406.35 422.74 406.35 422.74 600 214.87 564.42 214.87 406.35'/>
+                        <polygon class='cls-2-lg' points='253.72 444.51 460.58 444.51 460.58 645.16 253.72 609.58 253.72 444.51'/>
+                        <polygon class='cls-3-lg' points='177.79 423.54 177.79 522.36 76.34 492.06 76.34 423.54 177.79 423.54'/>
+                        <polygon class='cls-3-lg' points='234.47 425.54 441.33 425.54 441.33 623.18 234.47 587.61 234.47 425.54'/>
+                    </svg>
+                </div>
+                <h1 class="game-title">RIVAL SNAKE</h1>
+                <p class="tagline">P1: WASD   |   P2: Arrow Keys</p>
+                <button id="start-button" class="btn">Start Game</button>
+            </div>
+
+            <div id="game-over-screen" class="screen">
+                <h2 id="result-title"></h2>
+                <p id="result-details" class="tagline"></p>
+                <button id="restart-button" class="btn">Play Again</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
