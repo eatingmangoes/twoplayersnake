@@ -1,7 +1,7 @@
 # 🐍 Rival Snake
 
 [![Live Demo](https://img.shields.io/badge/PLAY_NOW-Live_Demo-00f5d4?style=for-the-badge&logo=github)](https://eatingmangoes.github.io/twoplayersnake/)
-![Gameplay Screenshot](https://files.catbox.moe/j5ha3k.png)
+<img src="https://files.catbox.moe/j5ha3k.png" alt="Gameplay Screenshot" width="700" />
 
 ---
 
